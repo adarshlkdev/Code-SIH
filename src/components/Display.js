@@ -24,13 +24,12 @@ const Display = ({ contract, account }) => {
       // console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
-          <a href={item} key={i} target="_blank" rel="noreferrer">
+          <a href={item} key={i} target="-blank">
             <img
               key={i}
               src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
               alt="new"
-              className="image-list"
-            ></img>
+              className="image-list"></img>
           </a>
         );
       });
@@ -41,14 +40,15 @@ const Display = ({ contract, account }) => {
   };
   return (
     <>
-      <div className="">{data}</div>
+      <div className="image-list">{data}</div>
       <input
-        className='w-[600px] bg-gradient-to-r
-         from-pink-300 to-cyan-300 border-2 m-auto mt-2 rounded-lg p-3 flex border-gray-300'
+        className=" address w-[600px] bg-gradient-to-r
+         from-pink-300 to-cyan-300 border-2 m-auto mt-2 rounded-lg p-3 flex border-gray-300"
         type="text"
-        placeholder="Enter your address"
-      ></input>
-      <button className="bg-gradient-to-r from-pink-500 to-cyan-400 px-4 my-6 py-2 text-white font-semibold rounded-lg hover:bg-transparent" onClick={getdata}>
+        placeholder="Enter your address"></input>
+      <button
+        className=" center button bg-gradient-to-r from-pink-500 to-cyan-400 px-4 my-6 py-2 text-white font-semibold rounded-lg hover:bg-transparent"
+        onClick={getdata}>
         Get Data
       </button>
     </>
